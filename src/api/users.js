@@ -1,10 +1,6 @@
 import axios from 'axios';
 
 export const getUsers = () => {
-  return axios.get('/users', {
-    params: {
-      total: 1000,
-      per_page: 12
-    }
-  });
+    const res = axios.get('/maps', {});
+    return res;
 };

@@ -1,14 +1,16 @@
 import React from 'react';
-import { ListGroup, ListGroupItem } from 'reactstrap';
 
 const UsersList = ({ users }) => {
-  return (
-    <ListGroup>
-      {users.map(user => {
-        return <ListGroupItem key={user.id}>{user.first_name}</ListGroupItem>;
-      })}
-    </ListGroup>
-  );
+    if (users.length === 0) {
+        users = [{'User': 'Carm'}, {'User': 'Edna'}, {'User': 'Joanne'}];
+    }
+    return (
+        <div>
+        <ul>{users[0].User}</ul>
+        <ul>{users[1].User}</ul>
+        <ul>{users[2].User}</ul>
+        </div>
+    );
 };
 
 export default UsersList;

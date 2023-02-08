@@ -5,23 +5,24 @@ import { Header } from './Header';
 import UsersList from './UsersList';
 
 const App = props => {
-  const { getUsersRequest, users } = props;
+    const { getUsersRequest, users } = props;
+    console.log(props);
 
-  useEffect(() => {
-    getUsersRequest();
-  }, [getUsersRequest]);
+    useEffect(() => {
+        getUsersRequest();
+    }, [getUsersRequest]);
 
-  return (
-    <>
-      <Header />
-      <UsersList users={users.items} />
-    </>
-  );
+    return (
+        <>
+        <Header />
+        <UsersList users={users.items} />
+        </>
+    );
 };
 
 export default connect(
-  ({ users }) => ({ users }),
-  {
-    getUsersRequest
-  }
+    ({ users }) => ({ users }),
+    {
+        getUsersRequest
+    }
 )(App);

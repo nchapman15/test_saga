@@ -10,7 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import App from './components/App';
 
-axios.defaults.baseURL = 'https://reqres.in/api';
+axios.defaults.baseURL = 'http://127.0.0.1:8080';
 
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducers, applyMiddleware(sagaMiddleware));
