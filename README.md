@@ -1,2 +1,2 @@
 # test_saga
-Created with CodeSandbox
+Simple app to build my understanding of redux reducers, actions, sagas
